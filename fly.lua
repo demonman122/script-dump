@@ -2,7 +2,7 @@ local flight
 local plr = game.Players.LocalPlayer
 IYMouse = plr:GetMouse()
 IYMouse.KeyDown:connect(function(key)
-    if key == "y" then
+    if key == "x" then
         if flight then
             flight = false
             fly()
@@ -37,8 +37,7 @@ function sFLY(vfly)
 		local BG = Instance.new('BodyGyro', T)
 		local BV = Instance.new('BodyVelocity', T)
 		BG.P = 9e4
-		BG.ma
-    Torque = Vector3.new(9e9, 9e9, 9e9)
+		BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
 		BG.cframe = T.CFrame
 		BV.velocity = Vector3.new(0, 0, 0)
 		BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
